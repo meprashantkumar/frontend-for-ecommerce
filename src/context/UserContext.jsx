@@ -24,6 +24,7 @@ export const UserContextProvider = ({ children }) => {
         setIsAuth(true);
         setUser(data.user);
         navigate("/");
+        window.location.reload();
       }
     } catch (error) {
       toast.error(error.response.data.message);
